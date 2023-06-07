@@ -28,7 +28,7 @@ const Login = () => {
         setAlert(null)
 
         try {
-            const response = await axios.post("http://localhost:3500/login", userInput)
+            const response = await axios.post("http://localhost:3000/login", userInput)
             console.log(response.data.message)
             setAlert({ type: "success", message: response?.data.message })
             setIsLoading(false)

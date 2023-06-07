@@ -10,7 +10,7 @@ interface UserInput {
     password?: string
 }
 
-interface Alert {
+interface AlertType {
     type: string,
     message: string
 }
@@ -18,7 +18,7 @@ interface Alert {
 const Register = () => {
     const [userInput, setUserInput] = useState<UserInput | null>(null)
     const [isLoading, setIsLoading] = useState(false)
-    const [alert, setAlert] = useState<Alert | null>(null)
+    const [alert, setAlert] = useState<AlertType | null>(null)
 
     const handleChange = (e: any) => {
         const {value, name} = e.target

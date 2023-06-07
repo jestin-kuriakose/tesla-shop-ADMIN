@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from 'axios'
 import TopBar from '../../components/TopBar/TopBar'
 import Sidebar from '../../components/Sidebar/Sidebar'
 import { Link } from 'react-router-dom'
-import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid'
+import { DataGrid, GridColDef } from '@mui/x-data-grid'
 import { DeleteOutline } from '@mui/icons-material'
-import { productRows } from '../../dummyData'
 import "./ProductList.scss"
+import { Product } from '../../types'
 
 const ProductList = () => {
-    const [products, setProducts] = useState<any []>([])
+    const [products, setProducts] = useState<Product[]>([])
 
     useEffect(() => {
       const fetchProducts = async () => {
@@ -26,7 +26,7 @@ const ProductList = () => {
 
     const handleDelete = async(id: any) => {
         try {
-          const response = await axios.delete(`http://localhost:3001/api/v1/products/id`)
+          const response = await axios.delete(`http://localhost:3001/api/v1/products/${id}`)
           console.log(response.data)
         } catch(err) {
           console.log(err)
