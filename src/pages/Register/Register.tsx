@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './Register.scss'
 import axios from 'axios'
 import Alert from '../../components/Alert/Alert'
