@@ -1,4 +1,7 @@
-export const userData = [
+import { OrderDataType, UserData, UserRowType } from "./types";
+
+
+export const userData: UserData[] = [
     {
       name: "Jan",
       "Active User": 4000,
@@ -64,9 +67,10 @@ export const userData = [
     },
   ];
 
-  export const userRows = [
+  export const userRows: UserRowType[] = [
     {
-      id: 1,
+      _id: 1,
+      img: "",
       username: "Jon Snow",
       avatar:
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
@@ -75,7 +79,8 @@ export const userData = [
       transaction: "$120.00",
     },
     {
-      id: 2,
+      _id: 2,
+      img: "",
       username: "Jon Snow",
       avatar:
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
@@ -84,7 +89,8 @@ export const userData = [
       transaction: "$120.00",
     },
     {
-      id: 3,
+      _id: 3,
+      img: "",
       username: "Jon Snow",
       avatar:
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
@@ -93,7 +99,8 @@ export const userData = [
       transaction: "$120.00",
     },
     {
-      id: 4,
+      _id: 4,
+      img: "",
       username: "Jon Snow",
       avatar:
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
@@ -102,7 +109,8 @@ export const userData = [
       transaction: "$120.00",
     },
     {
-      id: 5,
+      _id: 5,
+      img: "",
       username: "Jon Snow",
       avatar:
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
@@ -111,7 +119,8 @@ export const userData = [
       transaction: "$120.00",
     },
     {
-      id: 6,
+      _id: 6,
+      img: "",
       username: "Jon Snow",
       avatar:
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
@@ -120,7 +129,8 @@ export const userData = [
       transaction: "$120.00",
     },
     {
-      id: 7,
+      _id: 7,
+      img: "",
       username: "Jon Snow",
       avatar:
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
@@ -129,7 +139,8 @@ export const userData = [
       transaction: "$120.00",
     },
     {
-      id: 8,
+      _id: 8,
+      img: "",
       username: "Jon Snow",
       avatar:
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
@@ -138,7 +149,8 @@ export const userData = [
       transaction: "$120.00",
     },
     {
-      id: 9,
+      _id: 9,
+      img: "",
       username: "Jon Snow",
       avatar:
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
@@ -147,7 +159,8 @@ export const userData = [
       transaction: "$120.00",
     },
     {
-      id: 10,
+      _id: 10,
+      img: "",
       username: "Jon Snow",
       avatar:
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
@@ -250,7 +263,7 @@ export const userData = [
     },
   ];
 
-  export const orderData = [
+  export const orderData: OrderDataType[] = [
     {
         _id: 1,
         createdAt: "05/22/2022",

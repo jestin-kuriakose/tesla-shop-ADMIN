@@ -1,13 +1,23 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import "./WidgetLg.scss"
 import { orderData } from '../../dummyData';
 
+interface ButtonProps {
+  type: string
+}
+
+interface OrderDataType {
+  _id: number,
+  createdAt: string,
+  amount: number,
+  status: string
+}
+
 const WidgetLg = () => {
-    const Button = ({ type }: any) => {
+    const Button = ({ type }: ButtonProps) => {
         return <button className={"widgetLgButton " + type}>{type}</button>;
       };
-      const [orders, setOrders] = useState<any[]>([])
+      const [orders, setOrders] = useState<OrderDataType[]>([])
     
       useEffect(()=> {
         const getOrders = async () => {

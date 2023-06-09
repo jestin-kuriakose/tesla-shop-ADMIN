@@ -1,11 +1,11 @@
 import { Visibility } from '@mui/icons-material'
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import "./WidgetSm.scss"
 import { userRows } from '../../dummyData'
+import { UserRowType } from '../../types'
 
 const WidgetSm = () => {
-    const [users, setUsers] = useState<any[]>([])
+    const [users, setUsers] = useState<UserRowType[]>([])
 
     useEffect(()=> {
       const getUsers = async () => {

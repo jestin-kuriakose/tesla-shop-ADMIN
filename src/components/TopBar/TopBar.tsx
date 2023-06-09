@@ -1,5 +1,3 @@
-import React from 'react'
-import './TopBar.scss'
 import { Language, NotificationsNone, Settings } from '@mui/icons-material'
 import "./TopBar.scss"
 

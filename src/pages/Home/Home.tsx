@@ -1,5 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
-import Layout from '../../components/Layout/Layout'
+import { useEffect, useMemo, useState } from 'react'
 import TopBar from '../../components/TopBar/TopBar'
 import Sidebar from '../../components/Sidebar/Sidebar'
 import FeaturedInfo from '../../components/FeaturedInfo/FeaturedInfo'
@@ -8,10 +7,14 @@ import WidgetSm from '../../components/WidgetSm/WidgetSm'
 import WidgetLg from '../../components/WidgetLg/WidgetLg'
 import "./Home.scss"
 import { userData } from '../../dummyData'
-import axios from 'axios'
+
+interface UserData {
+  name: string,
+  "Active User": number
+}
 
 const Home = () => {
-  const [userStats, setUserStats] = useState<any[]>([])
+  const [userStats, setUserStats] = useState<UserData[]>([])
 
   const MONTHS = useMemo(()=>
   ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],[])

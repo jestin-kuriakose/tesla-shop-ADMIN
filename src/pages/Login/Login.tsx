@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FormEvent, useState } from 'react'
+import { ChangeEvent, FormEvent, useState } from 'react'
 import axios from 'axios'
 import "./Login.scss"
 import Alert from '../../components/Alert/Alert'
@@ -8,14 +8,14 @@ interface UserInput {
     password?: string
 }
 
-interface Alert {
+interface AlertTypes {
     type: string,
     message: string
 }
 
 const Login = () => {
     const [userInput, setUserInput] = useState<UserInput>({})
-    const [alert, setAlert] = useState<Alert | null>(null)
+    const [alert, setAlert] = useState<AlertTypes | null>(null)
     const [isLoading, setIsLoading] = useState(false)
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {

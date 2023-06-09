@@ -1,8 +1,20 @@
-import React from 'react'
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis } from 'recharts'
 import "./Chart.scss"
 
-const Chart = ({ title, data, dataKey, grid }: any) => {
+interface ChartProps {
+  title: string,
+  data: UserData[],
+  dataKey: string,
+  grid: boolean
+}
+
+interface UserData {
+  name: string,
+  "Active User": number
+}
+
+const Chart = ({ title, data, dataKey, grid }: ChartProps) => {
+  console.log(grid)
   return (
     <div className="chart">
       <h3 className="chartTitle">{title}</h3>

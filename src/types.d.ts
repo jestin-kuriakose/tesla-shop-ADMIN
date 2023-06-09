@@ -23,3 +23,25 @@ interface Variation {
     price: number,
     stock: number
 }
+
+export interface UserData {
+    name: string,
+    "Active User": number
+  }
+  
+export interface OrderDataType {
+    _id: number,
+    createdAt: string,
+    amount: number,
+    status: string
+}
+
+export interface UserRowType {
+    _id: number,
+    img: string,
+    username: string,
+    avatar: string,
+    email: string,
+    status: string,
+    transaction: string,
+}
