@@ -3,6 +3,11 @@ import axios from 'axios'
 import "./Login.scss"
 import Alert from '../../components/Alert/Alert'
 
+const BASE_URL = 
+    process.env.NODE_ENV === "production" ?
+    "https://frail-slip-ox.cyclic.app" :
+    "http://localhost:3000"
+
 interface UserInput {
     email?: string,
     password?: string
@@ -28,7 +33,7 @@ const Login = () => {
         setAlert(null)
 
         try {
-            const response = await axios.post("http://localhost:3000/login", userInput)
+            const response = await axios.post(BASE_URL + "/login", userInput)
             console.log(response.data.message)
             setAlert({ type: "success", message: response?.data.message })
             setIsLoading(false)

@@ -8,13 +8,18 @@ import { DeleteOutline } from '@mui/icons-material'
 import "./ProductList.scss"
 import { Product } from '../../types'
 
+const BASE_URL = 
+    process.env.NODE_ENV === "production" ?
+    "https://frail-slip-ox.cyclic.app" :
+    "http://localhost:3000"
+
 const ProductList = () => {
     const [products, setProducts] = useState<Product[]>([])
 
     useEffect(() => {
       const fetchProducts = async () => {
         try {
-          const response = await axios.get('http://localhost:3000/api/v1/products')
+          const response = await axios.get(BASE_URL + '/api/v1/products')
           console.log(response.data)
           setProducts(response.data)
         } catch(err) {
@@ -26,7 +31,7 @@ const ProductList = () => {
 
     const handleDelete = async(id: any) => {
         try {
-          const response = await axios.delete(`http://localhost:3001/api/v1/products/${id}`)
+          const response = await axios.delete(BASE_URL + `/api/v1/products/${id}`)
           console.log(response.data)
         } catch(err) {
           console.log(err)

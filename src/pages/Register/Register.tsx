@@ -3,6 +3,11 @@ import './Register.scss'
 import axios from 'axios'
 import Alert from '../../components/Alert/Alert'
 
+const BASE_URL = 
+    process.env.NODE_ENV === "production" ?
+    "https://frail-slip-ox.cyclic.app" :
+    "http://localhost:3000"
+
 interface UserInput {
     firstName?: string,
     lastName?: string,
@@ -31,7 +36,7 @@ const Register = () => {
         setAlert(null)
 
         try {
-            const res = await axios.post('http://localhost:3500/register', userInput)
+            const res = await axios.post(BASE_URL + '/register', userInput)
             setIsLoading(false)
             setAlert( { type: "success", message: res.data.message } )
         } catch(err: any) {
